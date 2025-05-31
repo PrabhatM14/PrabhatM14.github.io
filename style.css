@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #f7f7f7;
+  background: #0a1633; /* dark navy blue */
   font-family: Helvetica, sans-serif;
   color: #111;
 }
@@ -27,7 +27,17 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
   padding: 20px;
+  background: rgba(255,255,255,0.08); /* fallback for custom colors */
+  backdrop-filter: blur(2px);
+  /* semi-translucent effect */
 }
+
+.tile.red    { background: rgba(255, 71, 87, 0.7); }
+.tile.blue   { background: rgba(30, 144, 255, 0.7); }
+.tile.yellow { background: rgba(255, 165, 2, 0.7); }
+.tile.purple { background: rgba(162, 155, 254, 0.7); }
+.tile.green  { background: rgba(46, 213, 115, 0.7); }
+.tile.dark   { background: rgba(47, 53, 66, 0.8); color: #fff; }
 
 .tile:hover {
   transform: scale(1.03);
@@ -49,11 +59,3 @@ body {
   grid-column: span 6;
   grid-row: span 1;
 }
-
-/* Colors inspired by schoooool vibes */
-.red { background: #ff4757; }
-.blue { background: #1e90ff; }
-.yellow { background: #ffa502; }
-.purple { background: #a29bfe; }
-.green { background: #2ed573; }
-.dark { background: #2f3542; color: #fff; }
