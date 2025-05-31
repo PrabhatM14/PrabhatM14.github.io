@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background: #f7f7f7;
+  font-family: Helvetica, sans-serif;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 150px;
+  gap: 20px;
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom sizes */
+.large {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.medium {
+  grid-column: span 2;
+}
+.small {
+  grid-column: span 1;
+}
+.wide {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+/* Colors inspired by schoooool vibes */
+.red { background: #ff4757; }
+.blue { background: #1e90ff; }
+.yellow { background: #ffa502; }
+.purple { background: #a29bfe; }
+.green { background: #2ed573; }
+.dark { background: #2f3542; color: #fff; }
