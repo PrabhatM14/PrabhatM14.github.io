@@ -14,7 +14,7 @@
       <p>
         I'm currently a Computer Science student based in the NYC Metropolitan Area aspiring to be the best developer I can be.<br> <br>
         On this website, you'll find a little bit about myself, including projects, interests, and my resume. <br>
-        At the moment, alongside teaching myself to be a full stack developer, I am also working towards learning the skills needed
+        At the moment, alongside teaching myself to become a full stack developer, I am also working towards learning the skills needed
          to succeed in software development within some of my fields of interest, as listed below.
       </p>
       <ul>
@@ -49,9 +49,62 @@
       <div class="contact-buttons">
         <a href="mailto:prabhatm12345@gmail.com" class="contact-btn">Email</a>
         <a href="https://www.linkedin.com/in/prabhat-mishra101" class="contact-btn" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="prabhatm14.github.io" class="contact-btn" target="_blank" rel="noopener">Website</a>
+        <a href="https://prabhatm14.github.io" class="contact-btn" target="_blank" rel="noopener">Website</a>
+        <button class="contact-btn" id="openContactForm" type="button">Contact Form</button>
       </div>
     </div>
+    <!---------------------------------------------------------------------------------------------------------------------------------->
   </main>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal" style="display:none;">
+    <div class="modal-content" id="modalContent">
+      <span class="close-modal" id="closeContactForm">&times;</span>
+      <h2>Contact Form</h2>
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f42b23df-b3dc-4991-8a4d-8236beda76a9">
+        <label for="name">Name:</label><br>
+        <input id="name" name="name" type="text" required><br>
+        <label for="email">Email:</label><br>
+        <input id="email" name="email" type="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit" class="contact-btn">Send</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Show modal
+    document.getElementById('openContactForm').onclick = function() {
+      document.getElementById('contactModal').style.display = 'block';
+    };
+    // Hide modal
+    document.getElementById('closeContactForm').onclick = function() {
+      document.getElementById('contactModal').style.display = 'none';
+    };
+    // Hide modal when clicking outside modal content
+    window.onclick = function(event) {
+      var modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+
+    // Replace form with thank you message after submit
+    document.getElementById('contactForm').onsubmit = function(e) {
+      e.preventDefault();
+      // Optionally, send the form via AJAX here, or let Web3Forms handle it if you want a redirect
+      document.getElementById('modalContent').innerHTML = `
+        <span class="close-modal" id="closeContactForm">&times;</span>
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully.<br>I will get back to you soon.</p>
+      `;
+      // Re-attach close handler for the new close button
+      document.getElementById('closeContactForm').onclick = function() {
+        document.getElementById('contactModal').style.display = 'none';
+      };
+      return false;
+    };
+  </script>
 </body>
 </html>
