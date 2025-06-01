@@ -282,3 +282,55 @@ body {
   height: 160px;
   background: #118ab2;
 }
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 18px;
+    padding: 18px;
+    max-width: 100vw;
+  }
+
+  .tile {
+    font-size: 1.1rem;
+    padding: 14px 10px 18px 10px;
+  }
+
+  .tile.large,
+  .tile.medium,
+  .tile.small,
+  .tile.tall,
+  .tile.wide {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  .decor-circles {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .circle,
+  .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+    opacity: 0.12;
+  }
+
+  .circle1 { width: 60px; height: 60px; top: 3%; left: 5%; }
+  .circle2 { width: 80px; height: 80px; top: 70%; left: 70%; }
+  .circle3 { width: 40px; height: 40px; top: 85%; left: 5%; }
+  .circle4 { width: 60px; height: 60px; top: 25%; left: 70%; }
+  .circle5 { width: 40px; height: 40px; top: 10%; left: 80%; }
+  .circle6 { width: 60px; height: 60px; top: 80%; left: 40%; }
+}
+
+@media (max-width: 400px) {
+  .tile {
+    font-size: 0.95rem;
+    padding: 8px 4px 12px 4px;
+  }
+  .modal-content {
+    padding: 12px 4px 12px 4px;
+    max-width: 98vw;
+  }
+}
