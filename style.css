@@ -214,3 +214,71 @@ body {
   text-align: center;
   display: none;
 }
+
+.decor-circles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+  width: 180px;
+  height: 180px;
+  background: #edf2f4;
+}
+
+.circle1 {
+  top: 5%;
+  left: 8%;
+  width: 120px;
+  height: 120px;
+  background: #8d99ae;
+}
+
+.circle2 {
+  top: 60%;
+  left: 80%;
+  width: 200px;
+  height: 200px;
+  background: #ef233c;
+}
+
+.circle3 {
+  top: 80%;
+  left: 10%;
+  width: 90px;
+  height: 90px;
+  background: #edf2f4;
+}
+
+.circle4 {
+  top: 30%;
+  left: 60%;
+  width: 140px;
+  height: 140px;
+  background: #ffd166;
+}
+
+.circle5 {
+  top: 15%;
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  background: #06d6a0;
+}
+
+.circle6 {
+  top: 75%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  background: #118ab2;
+}
