@@ -29,7 +29,7 @@ body {
   border-radius: 12px;
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: left;
-  padding: 16px 32px 32px 32px;
+  padding: 16px 32px 32px;
   background: rgba(255,255,255,0.13);
   backdrop-filter: blur(2px);
 }
@@ -114,7 +114,7 @@ body {
 .modal-content {
   background: #8d99ae;
   color: #2b2d42;
-  padding: 32px 24px 24px 24px;
+  padding: 32px 24px 24px;
   border-radius: 12px;
   max-width: 400px;
   width: 90vw;
@@ -156,65 +156,6 @@ body {
   user-select: none;
 }
 
-.form-group {
-  position: relative;
-  margin-bottom: 24px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 14px 12px 14px 12px;
-  border: 1.5px solid #2b2d42;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.15);
-  color: #2b2d42;
-  font-size: 1rem;
-  font-family: 'Times New Roman', sans-serif;
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  resize: vertical;
-}
-
-.form-input:focus {
-  border-color: #8d99ae;
-  background: #fff;
-}
-
-.form-label {
-  position: absolute;
-  left: 12px;
-  top: 14px;
-  color: #2b2d42;
-  background: transparent;
-  pointer-events: none;
-  font-size: 1rem;
-  transition: 0.2s;
-  padding: 0 4px;
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown):not(:focus) + .form-label,
-.form-input:not(:focus):not(:placeholder-shown) + .form-label,
-.form-input:valid + .form-label {
-  top: -12px;
-  left: 8px;
-  background: #8d99ae;
-  color: #2b2d42;
-  font-size: 0.85rem;
-  padding: 0 4px;
-}
-
-.form-success {
-  color: #2b2d42;
-  background: #b7e4c7;
-  border-radius: 6px;
-  padding: 10px 16px;
-  margin-top: 16px;
-  font-size: 1rem;
-  text-align: center;
-  display: none;
-}
-
 .decor-circles {
   position: fixed;
   top: 0; left: 0;
@@ -224,64 +165,21 @@ body {
   z-index: 0;
 }
 
-.circle {
+.circle,
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
   position: absolute;
   border-radius: 50%;
   opacity: 0.18;
   pointer-events: none;
   z-index: 0;
-  width: 180px;
-  height: 180px;
-  background: #edf2f4;
 }
 
-.circle1 {
-  top: 5%;
-  left: 8%;
-  width: 120px;
-  height: 120px;
-  background: #8d99ae;
-}
-
-.circle2 {
-  top: 60%;
-  left: 80%;
-  width: 200px;
-  height: 200px;
-  background: #ef233c;
-}
-
-.circle3 {
-  top: 80%;
-  left: 10%;
-  width: 90px;
-  height: 90px;
-  background: #edf2f4;
-}
-
-.circle4 {
-  top: 30%;
-  left: 60%;
-  width: 140px;
-  height: 140px;
-  background: #ffd166;
-}
-
-.circle5 {
-  top: 15%;
-  left: 70%;
-  width: 100px;
-  height: 100px;
-  background: #06d6a0;
-}
-
-.circle6 {
-  top: 75%;
-  left: 50%;
-  width: 160px;
-  height: 160px;
-  background: #118ab2;
-}
+.circle1 { top: 5%; left: 8%; width: 120px; height: 120px; background: #8d99ae; }
+.circle2 { top: 60%; left: 80%; width: 200px; height: 200px; background: #ef233c; }
+.circle3 { top: 80%; left: 10%; width: 90px; height: 90px; background: #edf2f4; }
+.circle4 { top: 30%; left: 60%; width: 140px; height: 140px; background: #ffd166; }
+.circle5 { top: 15%; left: 70%; width: 100px; height: 100px; background: #06d6a0; }
+.circle6 { top: 75%; left: 50%; width: 160px; height: 160px; background: #118ab2; }
 
 @media (max-width: 700px) {
   .grid {
@@ -291,12 +189,10 @@ body {
     padding: 18px;
     max-width: 100vw;
   }
-
   .tile {
     font-size: 1.1rem;
-    padding: 14px 10px 18px 10px;
+    padding: 14px 10px 18px;
   }
-
   .tile.large,
   .tile.medium,
   .tile.small,
@@ -305,17 +201,14 @@ body {
     grid-column: span 1 !important;
     grid-row: span 1 !important;
   }
-
   .decor-circles {
     width: 100vw;
     height: 100vh;
   }
-
   .circle,
   .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
     opacity: 0.12;
   }
-
   .circle1 { width: 60px; height: 60px; top: 3%; left: 5%; }
   .circle2 { width: 80px; height: 80px; top: 70%; left: 70%; }
   .circle3 { width: 40px; height: 40px; top: 85%; left: 5%; }
@@ -327,10 +220,10 @@ body {
 @media (max-width: 400px) {
   .tile {
     font-size: 0.95rem;
-    padding: 8px 4px 12px 4px;
+    padding: 8px 4px 12px;
   }
   .modal-content {
-    padding: 12px 4px 12px 4px;
+    padding: 12px 4px 12px;
     max-width: 98vw;
   }
 }
