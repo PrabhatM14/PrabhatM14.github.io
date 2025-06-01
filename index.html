@@ -32,8 +32,11 @@
         My github repositories include a couple assignments and projects that I have worked on. Here are a few:
       </p>
       <div class="project-buttons">
+        <a href="https://github.com/PrabhatM14/netScanner" class="project-btn" target="_blank" rel="noopener">
+          🌐 Network Scanner
+        </a>
         <a href="https://github.com/PrabhatM14/PrabhatM14.github.io" class="project-btn" target="_blank" rel="noopener">
-          🌐 Portfolio Website
+          💻 Portfolio Website
         </a>
         <a href="https://github.com/PrabhatM14/Square-Jump" class="project-btn" target="_blank" rel="noopener">
           🎮 Square Jump Game
@@ -41,10 +44,11 @@
         <a href="https://github.com/PrabhatM14/Java-Calculator" class="project-btn" target="_blank" rel="noopener">
           🧮 Calculator App
         </a>
+        
       </div>
     </div>
      <!---------------------------------------------------------------------------------------------------------------------------------->
-    <div class="tile tall"> <!-- Contact Me -->
+    <div class="tile tall"> <!-- Contact Me --> 
       <h3>Contact:</h3>
       <div class="contact-buttons">
         <a href="mailto:prabhatm12345@gmail.com" class="contact-btn">Email</a>
@@ -54,6 +58,7 @@
       </div>
     </div>
     <!---------------------------------------------------------------------------------------------------------------------------------->
+
   </main>
 
   <!-- Contact Form Modal -->
@@ -74,32 +79,26 @@
     </div>
   </div>
   <script>
-    // Show modal
     document.getElementById('openContactForm').onclick = function() {
       document.getElementById('contactModal').style.display = 'block';
     };
-    // Hide modal
     document.getElementById('closeContactForm').onclick = function() {
       document.getElementById('contactModal').style.display = 'none';
     };
-    // Hide modal when clicking outside modal content
     window.onclick = function(event) {
       var modal = document.getElementById('contactModal');
       if (event.target === modal) {
         modal.style.display = 'none';
       }
     };
-
-    // Replace form with thank you message after submit
+    
     document.getElementById('contactForm').onsubmit = function(e) {
       e.preventDefault();
-      // Optionally, send the form via AJAX here, or let Web3Forms handle it if you want a redirect
       document.getElementById('modalContent').innerHTML = `
         <span class="close-modal" id="closeContactForm">&times;</span>
         <h2>Thank You!</h2>
         <p>Your message has been sent successfully.<br>I will get back to you soon.</p>
       `;
-      // Re-attach close handler for the new close button
       document.getElementById('closeContactForm').onclick = function() {
         document.getElementById('contactModal').style.display = 'none';
       };
