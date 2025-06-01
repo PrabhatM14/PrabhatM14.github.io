@@ -54,6 +54,7 @@ body {
 
 .contact-buttons {
   display: flex;
+  flex-direction: column;
   gap: 16px;
   margin-top: 8px;
 }
@@ -89,3 +90,31 @@ body {
 .tile.small   { grid-column: span 1; }
 .tile.wide    { grid-column: span 6; grid-row: span 1; }
 .tile.tall    { grid-row: span 2; }
+
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.project-btn:hover {
+  background: rgba(255,255,255,0.35);
+  color: #0a1633;
+  transform: translateY(-2px) scale(1.04);
+}
