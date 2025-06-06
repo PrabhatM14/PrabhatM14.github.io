@@ -60,6 +60,14 @@
       </div>
     </div>
      <!---------------------------------------------------------------------------------------------------------------------------------->
+    <div class="tile medium"> <!-- Resume -->
+      <h3>Resume</h3>
+      <p>
+        Please feel free to view and download my resume below.
+      </p>
+      <button class="project-btn" id="openResume" type="button">View PDF</button>
+    </div>
+     <!---------------------------------------------------------------------------------------------------------------------------------->
     <div class="tile tall"> <!-- Contact Me --> 
       <h3>Contact:</h3>
       <div class="contact-buttons">
@@ -90,6 +98,16 @@
       </form>
     </div>
   </div>
+
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal" style="display:none;">
+    <div class="modal-content" style="max-width:700px;width:95vw;height:90vh; position:relative; display:flex; flex-direction:column;">
+      <span class="close-modal" id="closeResume">&times;</span>
+      <iframe src="WebResume.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width:100%;height:90%;border:none;flex:1 1 auto;" title="Resume PDF"></iframe>
+      <a href="WebResume.pdf" download class="download-resume-btn" title="Download PDF">⬇️ Download PDF</a>
+    </div>
+  </div>
+
   <script>
     document.getElementById('openContactForm').onclick = function() {
       document.getElementById('contactModal').style.display = 'block';
@@ -115,6 +133,19 @@
         document.getElementById('contactModal').style.display = 'none';
       };
       return false;
+    };
+
+    document.getElementById('openResume').onclick = function() {
+      document.getElementById('resumeModal').style.display = 'flex';
+    };
+    document.getElementById('closeResume').onclick = function() {
+      document.getElementById('resumeModal').style.display = 'none';
+    };
+    window.onclick = function(event) {
+      var modal = document.getElementById('resumeModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
     };
   </script>
 </body>
