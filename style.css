@@ -93,7 +93,7 @@ body {
 }
 
 .tile.large   { grid-column: span 3; grid-row: span 2; }
-.tile.medium  { grid-column: span 2; }
+.tile.medium  { grid-column: span 2; grid-row: span 1; }
 .tile.small   { grid-column: span 1; }
 .tile.wide    { grid-column: span 6; grid-row: span 1; }
 .tile.tall    { grid-row: span 2; }
