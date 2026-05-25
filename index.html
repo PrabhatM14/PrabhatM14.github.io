@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prabhat's Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.4" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
@@ -18,7 +18,7 @@
   </div>
 
   <main class="grid">
-    <div class="tile large">
+    <div class="tile top-row-card">
       <h1>👋 Hi, I'm Prabhat</h1> 
       <p>
         I'm a recent graduate with a Bachelor's degree in Computer Science from Rutgers University - New Brunswick. 
@@ -30,45 +30,64 @@
         <li>Backend Engineering</li>
         <li>Platform Engineering</li>
         <li>Network Engineering</li>
-        <li>Artificial Intelligence</li>
-        <li>Machine Learning</li>
+        <li>Systems Engineering</li>
+        <li>AI/ML</li>
       </ul>
     </div>
 
-    <div class="tile medium tall">
+    <div class="tile top-row-card">
       <h3>Projects:</h3>
       <p>Here are a couple of the projects that I've worked on:</p>
       <div class="project-buttons">
-        <a href="https://github.com/PrabhatM14/Concurrent-Web-Proxy" class="project-btn" target="_blank" rel="noopener">
-          Concurrent Web Proxy ↗
-        </a>
-        <a href="https://github.com/PrabhatM14/Maze-Search" class="project-btn" target="_blank" rel="noopener">
-          Maze Search Algorithm ↗
-        </a>
-        <a href="https://github.com/PrabhatM14/AirlineTixReservation" class="project-btn" target="_blank" rel="noopener">
-          Online Travel Reservation System ↗
-        </a>
-        <a href="https://github.com/PrabhatM14/netScanner" class="project-btn" target="_blank" rel="noopener">
-          Network Scanner ↗
-        </a>
-        <a href="https://github.com/PrabhatM14/PrabhatM14.github.io" class="project-btn" target="_blank" rel="noopener">
-          Portfolio Website ↗
-        </a>
+        <div class="project-item">
+          <a href="https://github.com/PrabhatM14/Concurrent-Web-Proxy" class="project-btn" target="_blank" rel="noopener">
+            Concurrent Web Proxy ↗
+          </a>
+        </div>
+        
+        <div class="project-item">
+          <a href="https://github.com/PrabhatM14/Maze-Search" class="project-btn" target="_blank" rel="noopener">
+            Maze Search Algorithm ↗
+          </a>
+        </div>
+        
+        <div class="project-item">
+          <a href="https://github.com/PrabhatM14/AirlineTixReservation" class="project-btn" target="_blank" rel="noopener">
+            Online Travel Reservation System ↗
+          </a>
+        </div>
+        
+        <div class="project-item">
+          <a href="https://github.com/PrabhatM14/netScanner" class="project-btn" target="_blank" rel="noopener">
+            Network Scanner ↗
+          </a>
+        </div>
+        <div class="project-item">
+          <a href="https://github.com/PrabhatM14/PrabhatM14.github.io" class="project-btn" target="_blank" rel="noopener">
+            Portfolio Website ↗
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="tile medium">
+    <div class="tile bottom-row-card">
+      <h3>Technical Skills:</h3>
+      <p class="stack-section"><strong>Languages:</strong><br>Python, Java, C, HTML/CSS, JavaScript, SQL, OCaml, Assembly</p>
+      <p class="stack-section" style="margin-top: 12px;"><strong>Tools & Infrastructure:</strong><br>Git+Github, Docker, MySQL, Linux, IntelliJ, Ecliple, PyCharm, Visual Studio, Conda, LaTeX,</p>
+    </div>
+
+    <div class="tile bottom-row-card">
       <h3>Resume:</h3>
-      <p>Please feel free to view and download my resume below.</p>
+      <p>This is where you can view and download my resume.</p>
       <button class="project-btn" id="openResume" type="button">View PDF</button>
     </div>
 
-    <div class="tile tall">
+    <div class="tile bottom-row-card">
       <h3>Contact:</h3>
+      <p>Please feel free to contact me through the links below.</p>
       <div class="contact-buttons">
         <a href="mailto:prabhatm12345@gmail.com" class="contact-btn">Email</a>
         <a href="https://www.linkedin.com/in/prabhatmishra123" class="contact-btn" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://prabhatm14.github.io" class="contact-btn" target="_blank" rel="noopener">Website</a>
         <button class="contact-btn" id="openContactForm" type="button">Contact Form</button>
       </div>
     </div>
