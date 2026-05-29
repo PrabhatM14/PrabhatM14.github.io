@@ -3,12 +3,12 @@
    ========================================================================== */
 body {
   margin: 0;
-  background: #1e2030; /* Rich, modern premium dark navy background */
+  background: #0d0f17; /* Deeper midnight background makes glows pop better */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: #f0f4f8;
   min-height: 100vh;
   display: flex;
-  align-items: center; /* Centers grid perfectly vertically on high-resolution displays */
+  align-items: center; 
   justify-content: center;
 }
 
@@ -18,10 +18,9 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(160px, auto); /* Safe stretching mechanism against text overflow */
   gap: 24px;
   padding: 60px;
-  max-width: 1400px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -36,121 +35,125 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   color: #edf2f4;
-  border-radius: 20px; /* Fluid round edges */
-  padding: 32px;
-  background: rgba(255, 255, 255, 0.04); 
-  backdrop-filter: blur(12px); /* High-end blurred frost depth */
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Crisp edge geometry border */
+  border-radius: 24px; /* Sleek modern curve */
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.02); 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06); 
   box-sizing: border-box;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-              background-color 0.25s ease, 
-              border-color 0.25s ease, 
-              box-shadow 0.25s ease;
-  width: 100%; /* Ensures alignment constraints fill the tracks perfectly */
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              background-color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+  width: 100%; 
 }
 
 /* Premium tactile lift effect */
 .tile:hover {
-  transform: translateY(-6px); /* Clean vertical lift */
-  background: rgba(255, 255, 255, 0.09); /* Slightly brightened glass backdrop */
-  border-color: rgba(255, 255, 255, 0.2); /* Edge highlight pops open on hover */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Deeper, more atmospheric shadow drop */
+  transform: translateY(-4px) scale(1.01); 
+  background: rgba(255, 255, 255, 0.05); 
+  border-color: rgba(255, 255, 255, 0.15); 
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+              0 0 50px rgba(255, 255, 255, 0.02);
 }
 
 /* Precise 2-Over-3 Layout Spanning Formula */
 .tile.top-row-card { 
-  grid-column: span 6; /* 6 + 6 = 12 columns (Split evenly in half) */
+  grid-column: span 6; 
 }
 
 .tile.bottom-row-card { 
-  grid-column: span 4; /* 4 + 4 + 4 = 12 columns (Split evenly into thirds) */
+  grid-column: span 4; 
 }
 
 /* ==========================================================================
    3. CONTENT FORMATTING & ELEMENT STRUCTURING
    ========================================================================== */
 .tile h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   margin-top: 0;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tile h3 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: #f8fafc;
 }
 
 .tile p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6; /* Breathing room factor */
-  margin: 0 0 1.2em 0;
-  color: #cbd5e1;
+  line-height: 1.65; 
+  margin: 0 0 1.5em 0;
+  color: #94a3b8; /* Calmed text color for high-end aesthetic contrast */
 }
 
 /* Sub-panel dual column layout for fields of interest list */
 .tile ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding-left: 20px;
+  gap: 12px;
+  padding-left: 0;
+  list-style-type: none; /* Removing raw bullets for a cleaner look */
   margin: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
 .tile ul li {
-  font-size: 1rem;
-  color: #edf2f4;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Subtle geometric custom bullet */
+.tile ul li::before {
+  content: "→";
+  color: #ef233c; /* Accent Rutgers Scarlet hint */
+  font-weight: bold;
 }
 
 /* Architecture Project Layout Blocks */
+.project-buttons {
+  display: grid !important; /* Balanced 2-column project matrix layout */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
 .project-item {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 14px;
-}
-
-.project-item:last-child {
-  margin-bottom: 0;
-}
-
-.project-desc {
-  font-size: 0.88rem !important;
-  color: #94a3b8 !important;
-  margin: 6px 0 0 4px !important;
-  line-height: 1.4 !important;
 }
 
 .stack-section {
-  font-size: 0.95rem !important;
-  color: #cbd5e1;
-  line-height: 1.5;
-  margin: 0 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6;
+  margin-bottom: 12px !important;
 }
 
-.tile > :last-child {
-  margin-bottom: 0;
+.stack-section strong {
+  color: #fff;
 }
 
 /* ==========================================================================
    4. WRAPPING INTERACTIVE BUTTON FLEX-PACKS
    ========================================================================== */
-.contact-buttons,
-.project-buttons {
+.contact-buttons {
   display: flex;
-  flex-direction: row; 
-  flex-wrap: wrap; /* Allows adaptive inline row generation */
-  gap: 12px;
-  margin-top: 8px;
+  flex-direction: column; /* Clean structural alignment inside small layout container */
+  gap: 10px;
   width: 100%;
 }
 
@@ -160,61 +163,87 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Turn individual project links into clean actionable blocks */
+.project-btn {
+  text-align: left;
+  justify-content: space-between;
 }
 
 .contact-btn:hover,
 .project-btn:hover,
 .modal-content button[type="submit"]:hover {
-  background: #ffffff;
-  color: #1e2030;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0d0f17;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #fff;
+}
+
+/* Emphasizes the primary action link */
+#openResume {
+  background: linear-gradient(135deg, rgba(239, 35, 60, 0.15) 0%, rgba(239, 35, 60, 0.05) 100%);
+  border-color: rgba(239, 35, 60, 0.3);
+  color: #ff4d6d;
+}
+#openResume:hover {
+  background: #ef233c;
+  color: #fff;
+  border-color: #ef233c;
 }
 
 /* ==========================================================================
-   5. MODAL SYSTEM OVERLAYS & FORMS
+   5. MODAL SYSTEM OVERLAYS & FORMS (Centered Viewport Engine)
    ========================================================================== */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
   inset: 0;
-  background: rgba(15, 17, 26, 0.75); 
-  backdrop-filter: blur(4px);
-  justify-content: center;
+  background: rgba(5, 6, 10, 0.85); 
+  backdrop-filter: blur(12px);
+  
+  /* Forces content components into the absolute middle of screen */
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
+/* Intercepts explicit toggles from JavaScript */
+.modal[style*="display: flex"],
 .modal[style*="block"] {
   display: flex !important;
 }
 
 .modal-content {
-  background: #2b2d42; /* Clean contextual theme anchor block */
+  background: #161925; 
   color: #edf2f4;
-  padding: 32px;
-  border-radius: 16px;
-  max-width: 450px;
-  width: 90vw;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  margin: auto; 
   position: relative;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .modal-content h2 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin-top: 0;
-  font-weight: 700;
 }
 
 .modal-content label {
@@ -227,15 +256,15 @@ body {
 
 .modal-content input,
 .modal-content textarea {
-  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 12px;
   margin-top: 6px;
   margin-bottom: 16px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 100%;
   font-size: 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  color: #ffffff; /* Light readable inputs for clear form visibility */
   resize: vertical;
   box-sizing: border-box;
 }
@@ -243,7 +272,8 @@ body {
 .modal-content input:focus,
 .modal-content textarea:focus {
   outline: none;
-  border-color: rgba(255,255,255,0.4);
+  border-color: #ef233c;
+  box-shadow: 0 0 0 1px #ef233c;
 }
 
 .close-modal {
@@ -265,22 +295,21 @@ body {
   display: block;
   width: fit-content;
   margin: 18px auto 0 auto;
-  background: #edf2f4;
-  color: #1e2030;
-  padding: 10px 20px;
-  border-radius: 8px;
+  background: #ef233c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: all 0.2s ease;
   z-index: 2;
   cursor: pointer;
 }
 
 .download-resume-btn:hover {
-  background: rgba(255,255,255,0.8);
-  transform: translateY(-1px);
+  background: #d90429;
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -288,9 +317,7 @@ body {
    ========================================================================== */
 .decor-circles {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
 }
@@ -298,49 +325,39 @@ body {
 .circle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.12; 
-  filter: blur(45px); /* Soft glow mapping values */
-  pointer-events: none;
+  opacity: 0.08; 
+  filter: blur(80px); /* Clean premium dispersion blend */
 }
 
-.circle1 { top: 5%; left: 8%; width: 150px; height: 150px; background: #8d99ae; }
-.circle2 { top: 55%; left: 75%; width: 240px; height: 240px; background: #ef233c; }
-.circle3 { top: 80%; left: 5%; width: 120px; height: 120px; background: #edf2f4; }
-.circle4 { top: 25%; left: 55%; width: 180px; height: 180px; background: #ffd166; }
-.circle5 { top: 10%; left: 85%; width: 130px; height: 130px; background: #06d6a0; }
-.circle6 { top: 75%; left: 45%; width: 210px; height: 210px; background: #118ab2; }
+.circle1 { top: -5%; left: 10%; width: 300px; height: 300px; background: #3b82f6; }
+.circle2 { top: 60%; left: 80%; width: 400px; height: 400px; background: #ef233c; }
+.circle3 { top: 75%; left: -5%; width: 250px; height: 250px; background: #818cf8; }
+.circle4 { top: 20%; left: 45%; width: 350px; height: 350px; background: #312e81; }
 
 /* ==========================================================================
    7. RESPONSIVE LAYER ADAPTATION (Tablets & Mobile Viewports)
    ========================================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);
-    padding: 30px;
+    padding: 40px;
   }
   .tile.top-row-card { grid-column: span 6; }
-  .tile.bottom-row-card { grid-column: span 2; } /* Evaluates to 3 columns of equal size on mid-screens */
+  .tile.bottom-row-card { grid-column: span 3; } 
+  .project-buttons { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 16px;
     padding: 20px;
-  }
-  .tile {
-    padding: 24px;
-    border-radius: 16px;
+    margin-top: 40px;
   }
   .tile.top-row-card,
   .tile.bottom-row-card {
     grid-column: span 1 !important;
   }
   .tile ul {
-    grid-template-columns: 1fr; /* Simplifies interests layout into a single column sequence on phone viewports */
-  }
-  .circle {
-    opacity: 0.05; /* Dim background glows to keep layout clear on tight screens */
+    grid-template-columns: 1fr; 
   }
 }
