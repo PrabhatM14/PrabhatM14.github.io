@@ -118,23 +118,23 @@
       </section>
 
 <!--Blog-->
-      
-<!--Blog-->
 <section class="block span-7" id="blog">
   <div class="block-label"><span class="tag">05</span><span class="fn">blog</span></div>
   <div class="block-body">
     <div class="entries">
 
-      {% for post in site.posts limit:3 %}
-        <a class="entry" href="{{ post.url | relative_url }}">
-          <span class="entry-name">{{ post.title }}</span>
-          <span class="entry-desc">{{ post.date | date: "%b %d, %Y" }}</span>
-        </a>
-      {% empty %}
+      {% if site.posts.size > 0 %}
+        {% for post in site.posts limit:3 %}
+          <a class="entry" href="{{ post.url | relative_url }}">
+            <span class="entry-name">{{ post.title }}</span>
+            <span class="entry-desc">{{ post.date | date: "%b %d, %Y" }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
         <div class="entry">
           <span class="entry-name" style="color: var(--text-mute);">No posts written yet.</span>
         </div>
-      {% endfor %}
+      {% endif %}
 
     </div>
   </div>

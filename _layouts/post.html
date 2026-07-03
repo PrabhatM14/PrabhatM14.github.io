@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Prabhat Mishra</title>
+  <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/style.css?v=3.0' | relative_url }}">
 </head>
 <body>
-  <div class="page" style="max-width: 750px;">
-    <header class="hero" style="margin-bottom: 2rem;">
-      <p class="hero-sub"><a href="{{ '/' | relative_url }}">← back to portfolio</a></p>
-      <h1 style="color: var(--text); font-family: var(--sans); margin-top: 1rem;">{{ page.title }}</h1>
-      <p style="font-family: var(--mono); color: var(--text-mute); font-size: 0.85rem;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
-    </header>
-    
-    <main style="color: var(--text-dim); font-family: var(--sans); line-height: 1.7;">
+  <div class="page" style="max-width: 750px; margin: 0 auto; padding: 40px 20px;">
+    <p><a href="{{ '/' | relative_url }}" style="color: #a6e3a1; text-decoration: none;">← back to portfolio</a></p>
+    <h1 style="color: #cdd6f4;">{{ page.title }}</h1>
+    <p style="color: #565973;">{{ page.date | date: "%B %d, %Y" }}</p>
+    <hr style="border: 0; border-top: 1px solid #313244; margin: 20px 0;">
+    <main style="color: #cdd6f4; line-height: 1.7;">
       {{ content }}
     </main>
   </div>
