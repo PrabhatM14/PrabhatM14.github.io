@@ -3,121 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prabhat's Website</title>
-  <link rel="stylesheet" href="style.css?v=1.4" />
+  <title>Prabhat Mishra</title>
+  <link rel="stylesheet" href="style.css?v=3.0" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="decor-circles">
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
-    <div class="circle circle4"></div>
-    <div class="circle circle5"></div>
-    <div class="circle circle6"></div>
+
+  <div class="page">
+
+<!--Header-->
+
+    <header class="hero">
+      <pre class="code-block hero-code"><code><span class="c-com"># portfolio.py</span> 
+      <span class="c-var">developer</span> = { 
+        <span class="c-prop">name</span>: <span class="c-str">"Prabhat Mishra"</span>, 
+        <span class="c-prop">role</span>: <span class="c-str">"Software Engineer"</span>, 
+        <span class="c-prop">status</span>: <span class="c-str">"Open To Work"</span> 
+      }<span class="cursor">▌</span></code></pre>
+      <p class="hero-sub"># Rutgers University - New Brunswick | B.S in Computer Science | 2026</p>
+    </header>
+
+    <main class="grid">
+
+<!--About-->
+
+      <section class="block span-5" id="about">
+        <div class="block-label"><span class="tag">01</span><span class="fn">about</span></div>
+        <div class="block-body">
+          <p>
+            Recent grad looking for Software Engineering roles ranging from full stack, backend,
+            platform, systems, to AI/ML. I like building things.
+          </p>
+          <ul class="tags">
+            <li>Full Stack</li>
+            <li>Backend</li>
+            <li>Platform</li>
+            <li>Network</li>
+            <li>Systems</li>
+            <li>AI/ML</li>
+          </ul>
+        </div>
+      </section>
+
+<!--Skills-->
+  
+      <section class="block span-5" id="skills">
+        <div class="block-label"><span class="tag">02</span><span class="fn">stack</span></div>
+        <div class="block-body">
+          <div class="skill-row">
+            <span class="skill-key">languages</span>
+            <span class="skill-val">Python, Java, C, HTML/CSS, JS, SQL, OCaml, Assembly</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-key">tools</span>
+            <span class="skill-val">Git, Docker, MySQL, Linux, IntelliJ, Eclipse, PyCharm, Conda, LaTeX, Flask</span>
+          </div>
+        </div>
+      </section>
+
+<!--Contact-->
+
+      <section class="block span-5" id="resume-contact">
+        <div class="block-label"><span class="tag">03</span><span class="fn">connect</span></div>
+        <div class="block-body">
+          <div class="btn-row">
+            <button class="btn btn-primary" id="openResume" type="button">resume<span class="chev">&gt;</span></button>
+            <a href="mailto:prabhatm12345@gmail.com" class="btn">email</a>
+            <a href="https://www.linkedin.com/in/prabhatmishra123" class="btn" target="_blank" rel="noopener">linkedin</a>
+            <button class="btn" id="openContactForm" type="button">message</button>
+          </div>
+        </div>
+      </section>     
+
+<!--Projects-->
+
+    <section class="block span-7" id="projects">
+        <div class="block-label"><span class="tag">04</span><span class="fn">projects</span></div>
+        <div class="block-body">
+          <div class="entries">
+
+            <a class="entry" href="https://github.com/PrabhatM14/Concurrent-Web-Proxy" target="_blank" rel="noopener">
+              <span class="entry-name">Concurrent Web Proxy</span>
+              <span class="entry-desc">Multithreaded C proxy &middot; ~80% latency reduction</span>
+            </a>
+
+            <a class="entry" href="https://github.com/PrabhatM14/AI-Log-Analyzer" target="_blank" rel="noopener">
+              <span class="entry-name">AI Cloud Log Analyzer</span>
+              <span class="entry-desc">Isolation Forest anomaly detection &middot; Docker + Flask</span>
+            </a>
+
+            <a class="entry" href="https://github.com/PrabhatM14/Maze-Search" target="_blank" rel="noopener">
+              <span class="entry-name">Maze Search Visualizer</span>
+              <span class="entry-desc">Pathfinding algorithms, visualized</span>
+            </a>
+
+            <a class="entry" href="https://github.com/PrabhatM14/AirlineTixReservation" target="_blank" rel="noopener">
+              <span class="entry-name">Travel Reservation System</span>
+              <span class="entry-desc">Java Swing + MySQL desktop app</span>
+            </a>
+
+            <a class="entry" href="https://github.com/PrabhatM14/netScanner" target="_blank" rel="noopener">
+              <span class="entry-name">Network Scanner</span>
+              <span class="entry-desc">Host discovery &amp; port scanning tool</span>
+            </a>
+
+            <a class="entry" href="https://github.com/PrabhatM14/PrabhatM14.github.io" target="_blank" rel="noopener">
+              <span class="entry-name">Portfolio Website</span>
+              <span class="entry-desc">This site's source</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+<!--Blog-->
+      
+    <section class="block span-7" id="blog">
+        <div class="block-label"><span class="tag">05</span><span class="fn">blog</span></div>
+        <div class="block-body">
+          <div class="entries">
+
+            <a class="entry" href="" target="_blank" rel="noopener">
+              <span class="entry-name">Under Maintenance...</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span class="c-com">// built by Prabhat, no framework, no fuss</span>
+    </footer>
+
   </div>
-
-  <main class="grid">
-    <div class="tile top-row-card">
-      <h1>👋 Hi, I'm Prabhat</h1> 
-      <p>
-        I'm a recent graduate with a Bachelor's degree in Computer Science from Rutgers University - New Brunswick. 
-        On this website, you'll find a little bit about myself, including some projects, interests, and my resume. 
-        At the moment, I am looking for opportunities within Software Engineering. Some of my main fields of interest include:
-      </p>
-      <ul>
-        <li>Full Stack Engineering</li>
-        <li>Backend Engineering</li>
-        <li>Platform Engineering</li>
-        <li>Network Engineering</li>
-        <li>Systems Engineering</li>
-        <li>AI/ML</li>
-      </ul>
-    </div>
-
-    <div class="tile top-row-card">
-      <h3>Projects:</h3>
-      <p>Here are a couple of the projects that I've worked on:</p>
-      <div class="project-buttons">
-
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/Concurrent-Web-Proxy" class="project-btn" target="_blank" rel="noopener">
-            Concurrent Web Proxy ↗
-          </a>
-        </div>
-
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/AI-Log-Analyzer" class="project-btn" target="_blank" rel="noopener">
-            AI Cloud Log Analyzer ↗
-          </a>
-        </div>
-
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/Maze-Search" class="project-btn" target="_blank" rel="noopener">
-            Maze Search Algorithm ↗
-          </a>
-        </div>
-        
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/AirlineTixReservation" class="project-btn" target="_blank" rel="noopener">
-            Online Reservation System ↗
-          </a>
-        </div>
-        
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/netScanner" class="project-btn" target="_blank" rel="noopener">
-            Network Scanner ↗
-          </a>
-        </div>
-        <div class="project-item">
-          <a href="https://github.com/PrabhatM14/PrabhatM14.github.io" class="project-btn" target="_blank" rel="noopener">
-            Portfolio Website ↗
-          </a>
-        </div> 
-
-      </div>
-    </div>
-
-    <div class="tile bottom-row-card">
-      <h3>Technical Skills:</h3>
-      <p class="stack-section"><strong>Languages:</strong><br>Python, Java, C, HTML/CSS, JavaScript, SQL, OCaml, Assembly</p>
-      <p class="stack-section" style="margin-top: 12px;"><strong>Dev Tools & Infrastructure:</strong><br>Git+Github, Docker, MySQL, Linux, IntelliJ, Ecliple, PyCharm, Visual Studio, Conda, LaTeX, Flask, Render Cloud</p>
-    </div>
-
-    <div class="tile bottom-row-card">
-      <h3>Resume:</h3>
-      <p>This is where you can view and download my resume.</p>
-      <button class="project-btn" id="openResume" type="button">View PDF</button>
-    </div>
-
-    <div class="tile bottom-row-card">
-      <h3>Contact:</h3>
-      <p>Please feel free to contact me through the links below.</p>
-      <div class="contact-buttons">
-        <a href="mailto:prabhatm12345@gmail.com" class="contact-btn">Email</a>
-        <a href="https://www.linkedin.com/in/prabhatmishra123" class="contact-btn" target="_blank" rel="noopener">LinkedIn</a>
-        <button class="contact-btn" id="openContactForm" type="button">Contact Form</button>
-      </div>
-    </div>
-  </main>
 
   <div id="contactModal" class="modal" style="display:none;">
     <div class="modal-content" id="modalContent">
       <span class="close-modal" id="closeContactForm">&times;</span>
-      <h2>Contact Form</h2>
+      <div class="block-label"><span class="fn">sendMessage</span></div>
       <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="f42b23df-b3dc-4991-8a4d-8236beda76a9">
-        
-        <label for="name">Name:</label>
+
+        <label for="name">name</label>
         <input id="name" name="name" type="text" required>
-        
-        <label for="email">Email:</label>
+
+        <label for="email">email</label>
         <input id="email" name="email" type="email" required>
-        
-        <label for="message">Message:</label>
+
+        <label for="message">message</label>
         <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit" class="contact-btn">Send</button>
+
+        <button type="submit" class="btn btn-primary">send<span class="chev">&gt;</span></button>
       </form>
     </div>
   </div>
@@ -126,14 +163,13 @@
     <div class="modal-content" style="max-width:700px; width:95vw; height:90vh; position:relative; display:flex; flex-direction:column;">
       <span class="close-modal" id="closeResume">&times;</span>
       <iframe src="Resume-PM.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width:100%; height:90%; border:none; flex:1 1 auto;" title="Resume PDF"></iframe>
-      <a href="Resume-PM.pdf" download class="download-resume-btn" title="Download PDF">⬇️ Download PDF</a>
+      <a href="Resume-PM.pdf" download class="btn btn-primary download-resume-btn" title="Download PDF">download_pdf<span class="chev">&gt;</span></a>
     </div>
   </div>
 
   <script>
-    // Modal Toggle Handlers
     document.getElementById('openContactForm').onclick = function() {
-      document.getElementById('contactModal').style.display = 'block';
+      document.getElementById('contactModal').style.display = 'flex';
     };
     document.getElementById('closeContactForm').onclick = function() {
       document.getElementById('contactModal').style.display = 'none';
@@ -146,46 +182,38 @@
       document.getElementById('resumeModal').style.display = 'none';
     };
 
-    // Robust Background Event Listener (Fixes the window.onclick override bug)
     window.addEventListener('click', function(event) {
       const contactModal = document.getElementById('contactModal');
       const resumeModal = document.getElementById('resumeModal');
-      
-      if (event.target === contactModal) {
-        contactModal.style.display = 'none';
-      }
-      if (event.target === resumeModal) {
-        resumeModal.style.display = 'none';
-      }
+      if (event.target === contactModal) contactModal.style.display = 'none';
+      if (event.target === resumeModal) resumeModal.style.display = 'none';
     });
-    
-    // Async Form Transmission UI Controller
+
     document.getElementById('contactForm').onsubmit = function(e) {
       e.preventDefault();
       const formData = new FormData(this);
-      
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          document.getElementById('modalContent').innerHTML = `
-            <span class="close-modal" id="closeContactForm">&times;</span>
-            <h2>Thank You!</h2>
-            <p>Your message has been sent successfully.<br>I will get back to you soon.</p>
-          `;
-          document.getElementById('closeContactForm').onclick = function() {
-            document.getElementById('contactModal').style.display = 'none';
-          };
-        } else {
-          alert("Something went wrong with the transmission. Please reach out via email directly.");
-        }
-      })
-      .catch(() => {
-        alert("Connection failure. Check your network or connection string settings.");
-      });
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById('modalContent').innerHTML = `
+              <span class="close-modal" id="closeContactForm">&times;</span>
+              <div class="block-label"><span class="fn">sendMessage</span></div>
+              <p class="success-msg">Message sent. I'll get back to you soon.</p>
+            `;
+            document.getElementById('closeContactForm').onclick = function() {
+              document.getElementById('contactModal').style.display = 'none';
+            };
+          } else {
+            alert("Something went wrong. Please reach out via email directly.");
+          }
+        })
+        .catch(() => {
+          alert("Connection failed. Check your network and try again.");
+        });
     };
   </script>
+
+  <script data-goatcounter="https://prxbhxt.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
