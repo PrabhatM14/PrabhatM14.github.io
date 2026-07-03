@@ -117,24 +117,28 @@
 
 <!--Blog-->
       
-    <section class="block span-7" id="blog">
-        <div class="block-label"><span class="tag">05</span><span class="fn">blog</span></div>
-        <div class="block-body">
-          <div class="entries">
+<!--Blog-->
+<section class="block span-7" id="blog">
+  <div class="block-label"><span class="tag">05</span><span class="fn">blog</span></div>
+  <div class="block-body">
+    <div class="entries">
 
-            <a class="entry" href="" target="_blank" rel="noopener">
-              <span class="entry-name">Under Maintenance...</span>
-            </a>
-
-          </div>
+      {% for post in site.posts limit:3 %}
+        <a class="entry" href="{{ post.url | relative_url }}">
+          <span class="entry-name">{{ post.title }}</span>
+          <span class="entry-desc">{{ post.date | date: "%b %d, %Y" }}</span>
+        </a>
+      {% empty %}
+        <div class="entry">
+          <span class="entry-name" style="color: var(--text-mute);">No posts written yet.</span>
         </div>
-      </section>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
 
     </main>
-
-    <footer class="footer">
-      <span class="c-com">// built by Prabhat, no framework, no fuss</span>
-    </footer>
 
   </div>
 

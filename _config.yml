@@ -1,0 +1,12 @@
+# Site Settings
+title: Prabhat Mishra
+description: Software Engineer Portfolio
+url: "https://PrabhatM14.github.io"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+theme: null # Tells Jekyll you are using your own HTML/CSS instead of a gem theme
+
+# URL structure for your articles
+permalink: /blog/:title/

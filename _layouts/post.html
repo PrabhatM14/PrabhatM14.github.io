@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Prabhat Mishra</title>
+  <link rel="stylesheet" href="{{ '/style.css?v=3.0' | relative_url }}">
+</head>
+<body>
+  <div class="page" style="max-width: 750px;">
+    <header class="hero" style="margin-bottom: 2rem;">
+      <p class="hero-sub"><a href="{{ '/' | relative_url }}">← back to portfolio</a></p>
+      <h1 style="color: var(--text); font-family: var(--sans); margin-top: 1rem;">{{ page.title }}</h1>
+      <p style="font-family: var(--mono); color: var(--text-mute); font-size: 0.85rem;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
+    
+    <main style="color: var(--text-dim); font-family: var(--sans); line-height: 1.7;">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
