@@ -435,4 +435,5 @@ textarea:focus-visible {
   vertical-align: middle; /* Centers the icon vertically with the surrounding text */
   display: inline-block;
   margin: 0 2px;       /* Adds a tiny bit of breathing room between the pipe | and the comma */
+  filter: brightness(0) invert(1);
 }
