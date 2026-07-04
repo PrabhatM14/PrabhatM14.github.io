@@ -428,3 +428,11 @@ textarea:focus-visible {
   .entry { flex-direction: column; align-items: flex-start; gap: 2px; }
   .entry-desc { text-align: left; }
 }
+
+.techy-icon {
+  width: 16px;         /* Adjust this slightly to match your font-size perfectly */
+  height: 16px;
+  vertical-align: middle; /* Centers the icon vertically with the surrounding text */
+  display: inline-block;
+  margin: 0 2px;       /* Adds a tiny bit of breathing room between the pipe | and the comma */
+}
